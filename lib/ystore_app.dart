@@ -2,6 +2,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:ystore/core/app/env/env_variables.dart';
 
 class YStoreApp extends StatelessWidget {
   const YStoreApp({super.key});
@@ -10,7 +11,8 @@ class YStoreApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return ScreenUtilInit(
       builder: (context, child) {
-        return const MaterialApp(
+        return MaterialApp(
+          debugShowCheckedModeBanner: EnvVariables.instance.debugMode,
           home: Home(),
         );
       },
