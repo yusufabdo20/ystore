@@ -1,0 +1,17 @@
+# flutter_native_splash:
+#   android:
+#     image: assets/images/core/splash1.png
+#     color: "#42a5f5"
+#   ios: true
+#   android_12:
+#     image: assets/images/core/splash1.png
+#     color: "#42a5f5"
+flutter_native_splash:
+  android: true
+  ios: true
+#ies and Android 11
+  color: "ECIES"
+  image: assets/images/core/splash1.png
+  android: 12
+    image: assets/images/core/splash1.png
+    color: "PECIES"

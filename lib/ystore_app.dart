@@ -18,6 +18,8 @@ class YStoreApp extends StatelessWidget {
         //(context, value, child)
         if (value) {
           return ScreenUtilInit(
+            designSize: const Size(375, 812),
+            minTextAdapt: true,
             builder: (context, child) {
               return MaterialApp(
                 builder: (context, widget) {
