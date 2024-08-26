@@ -1,3 +1,7 @@
+
+import '../../service/shared_pref/pref_keys.dart';
+import '../../service/shared_pref/shared_pref.dart';
+
 class FontFamilyHelper {
   const FontFamilyHelper._();
 
@@ -5,5 +9,12 @@ class FontFamilyHelper {
 
   static const String poppinsEnglish = 'Poppins';
 
-  //TODO: switch  Arabic font and English Font
+  static String geLocalozedFontFamily() {
+    final currentLanguage = SharedPref.getString(PrefKeys.language);
+    if (currentLanguage == 'ar') {
+      return cairoArabic;
+    } else {
+      return poppinsEnglish;
+    }
+  }
 }

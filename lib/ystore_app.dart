@@ -6,6 +6,10 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:ystore/core/app/connectivity_controller/connectivity_controller.dart';
 import 'package:ystore/core/app/env/env_variables.dart';
 import 'package:ystore/core/common/screens/no_network_screen.dart';
+import 'package:ystore/core/language/app_localizations.dart';
+
+import 'core/language/app_localizations_setup.dart';
+import 'core/routes/app/app_routes.dart';
 
 class YStoreApp extends StatelessWidget {
   const YStoreApp({super.key});
@@ -22,6 +26,12 @@ class YStoreApp extends StatelessWidget {
             minTextAdapt: true,
             builder: (context, child) {
               return MaterialApp(
+                localizationsDelegates:
+                    AppLocalizationsSetup.localizationsDelegates,
+                localeResolutionCallback:
+                    AppLocalizationsSetup.localeResolutionCallback,
+                locale: Locale('en'),
+                supportedLocales: AppLocalizationsSetup.supportedLocales,
                 builder: (context, widget) {
                   return Scaffold(
                     body: Builder(builder: (context) {
@@ -31,7 +41,9 @@ class YStoreApp extends StatelessWidget {
                   );
                 },
                 debugShowCheckedModeBanner: EnvVariables.instance.debugMode,
-                home: const Home(),
+                // home: const Home(),
+                onGenerateRoute: AppRoutes.onGenerateRoute,
+                initialRoute: AppRoutes.testOne,
               );
             },
           );
@@ -39,7 +51,7 @@ class YStoreApp extends StatelessWidget {
           return MaterialApp(
             title: 'No Network',
             debugShowCheckedModeBanner: EnvVariables.instance.debugMode,
-            home: const NoNetworkScreen(),
+            home: const NoNetWorkScreen(),
           );
         }
       },

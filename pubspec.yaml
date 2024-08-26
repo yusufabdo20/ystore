@@ -28,14 +28,40 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
+  animate_do: ^3.3.4
+  bloc: ^8.1.4
+  cached_network_image: 3.4.0
   connectivity_plus: ^6.0.3
   cupertino_icons: ^1.0.6
-  firebase_core: ^3.2.0
+  dio: ^5.6.0
+  firebase_core: ^3.3.0
   flutter:
     sdk: flutter
+  flutter_bloc: ^8.1.6
   flutter_dotenv: ^5.1.0
+  flutter_dropdown_alert: ^1.0.7
+  flutter_localization: 0.2.1
+  flutter_localizations:
+    sdk: flutter
   flutter_native_splash: ^2.4.1
   flutter_screenutil: ^5.9.3
+  flutter_svg: ^2.0.10+1
+  flutter_zoom_drawer: ^3.2.0
+  fluttertoast: ^8.2.8
+  freeze: ^1.0.0
+  freezed: ^2.5.7
+  get_it: ^7.7.0
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+  image_picker: ^1.1.2
+  intl: ^0.19.0
+  package_info_plus: ^8.0.2
+  permission_handler: ^11.3.1
+  pretty_dio_logger: ^1.4.0
+  share_plus: 10.0.0
+  shared_preferences: ^2.3.2
+  shimmer: ^3.0.0
+  webview_flutter: ^4.8.0
 
 dev_dependencies:
   flutter_launcher_icons: ^0.13.1
@@ -58,6 +84,8 @@ flutter:
   - .env.dev
   - .env.prod
   - assets/images/core/
+  - lang/ar.json
+  - lang/en.json
   #   - images/a_dot_ham.jpeg
   # An image asset can refer to one or more resolution-specific "variants", see
   fonts:
@@ -79,4 +107,3 @@ flutter:
       weight: 500
     - asset: assets/fonts/english/poppins/Poppins-Regular.ttf
       weight: 400
-
